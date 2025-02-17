@@ -1,0 +1,23 @@
+#nav-bar {
+  width: 100%;
+  height: 100px;
+  background-color: #426ef0;
+  display: flex;
+  align-items: center;
+  padding: 0 50px;
+  gap: 20px;
+
+  .nav-content {
+    color: white;
+    //background-color: green;
+    padding: 10px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    user-select: none;
+  }
+
+  .nav-content:hover {
+    background-color: #5e7ef5;
+  }
+
+}
