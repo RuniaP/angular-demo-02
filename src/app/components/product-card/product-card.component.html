@@ -1,17 +1,24 @@
 <div id="product-card-container">
-  <div id="image-holder">
-    <img src="{{image}}"/>
-  </div>
+  <div class="product-card">
+    <div class="product-image">
+      <img [src]="dog.image" alt="Product image" >
+    </div>
+    <div class="product-info">
+      <p class="product-name">{{dog.name}}</p>
+      <p class="product-breed">{{dog.breed}}</p>
 
-  <div id="contents">
-    <div id="name-and-price">
-      <p>{{name}}</p>
-      <p>{{price}}</p>
+      <div class="price-info">
+        @if (dog.breed == "Poodle") {
+          <p>$ <del>{{dog.price}}</del></p>
+        }
+        @let salePrice = dog.breed == "Poodle" ? dog.price * 0.5 : dog.price;
+        <p class="product-price">$ {{salePrice}}</p>
+      </div>
     </div>
 
-    <div>
-      <button class="btn-add">Thêm vào giỏ hàng</button>
+    <div style="display: flex; gap: 10px">
+        <button>Add to cart</button>
+        <button [routerLink]="['/dog-detail', dog.id]" (click)="dogService.getDogDetail(dog.id)">View detail</button>
     </div>
-
   </div>
 </div>

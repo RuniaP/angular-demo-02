@@ -1,10 +1,4 @@
 <app-navbar></app-navbar>
+<router-outlet></router-outlet>
 
-<div id="list-products">
-  @for (dog of dogs; track $index) {
-    <app-product-card [image]="dog.image"
-    [name]="dog.name"
-    [price]="dog.price"></app-product-card>
-  }
-</div>
 

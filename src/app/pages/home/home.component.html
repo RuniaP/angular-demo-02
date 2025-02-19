@@ -1,0 +1,7 @@
+<div id="list-products">
+  @for (dog of dogs; track $index){
+    <app-product-card
+      [dog]="dog"
+    ></app-product-card>
+  }
+</div>
