@@ -25,12 +25,42 @@
   }
 
   .product-info {
-    padding: 20px 0;
+    padding: 15px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
 
-    .product-name {
-      font-size: 20px;
-      font-weight: 500;
-      color: #333333;
+    .product-name-container {
+      width: 100%;
+      min-height: 50px; /* Ensures all names have the same height */
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      .product-name {
+        font-size: 20px;
+        font-weight: 500;
+        color: #0078ae;
+        text-decoration: none;
+        cursor: pointer;
+        word-break: break-word;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &:hover {
+          color: #426ef0;
+          text-decoration: underline;
+        }
+      }
+    }
+
+    .product-breed{
+      font-size: 16px;
+      color: #666666;
+      margin-bottom: 0px;
     }
 
     .product-price {
@@ -42,7 +72,7 @@
     .product-description {
       font-size: 16px;
       color: #666666;
-      margin-top: 5px;
+      margin-top: 10px;
     }
   }
 
@@ -94,7 +124,7 @@
 
 button {
   margin: 0 auto;
-  background-color: #e91e63;
+  background-color: #004666;
   color: white;
   border: none;
   padding: 10px 20px;
@@ -104,5 +134,5 @@ button {
 }
 
 button:hover {
-  background-color: #d81b60;
+  background-color: #00628F;
 }

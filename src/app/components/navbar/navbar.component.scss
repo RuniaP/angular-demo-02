@@ -1,29 +1,163 @@
 #nav-bar {
   width: 100%;
   height: 100px;
-  background-color: #426ef0;
+  background-color: #004666;
   display: flex;
   align-items: center;
-  padding: 0 50px;
+  padding: 0 25px;
   gap: 20px;
 
-  .nav-content {
-    color: white;
-    //background-color: green;
-    padding: 10px 15px;
-    border-radius: 8px;
-    cursor: pointer;
-    user-select: none;
-  }
-
-  .nav-content:hover {
-    background-color: #5e7ef5;
-  }
-
-  .cart {
-    width: 75%;
+  .logo-container {
+    width: 15%;
+    align-items: center;
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
+
+    #logo {
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 225px;
+      height: 100%;
+      object-fit: contain;
+    }
   }
 
+  .navBar-middleSection {
+    width: 70%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+
+    .nav-content {
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 10px 15px;
+      border-radius: 8px;
+      width: fit-content;
+      cursor: pointer;
+      user-select: none;
+      transition: transform 0.2s ease-in-out;
+
+      &:hover {
+        background-color: #00628F;
+        height: 100%;
+      }
+    }
+  }
+
+  .navBar-leftSection {
+    width: 15%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+
+    .cart {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 35px;
+
+      .iconPerson-container {
+        width: fit-content;
+        height: 100%;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        .icon-person{
+          font-size: 47px;
+          position: relative;
+          cursor: pointer;
+        }
+      }
+
+      .iconCart-container {
+        width: fit-content;
+        height: 100%; /* Full navbar height for hover */
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0 15px; /* Keeps spacing */
+        transition: background-color 0.2s ease-in-out;
+
+        &:hover {
+          background-color: #00628F;
+        }
+      }
+
+      .icon-basket {
+        font-size: 30px;
+        cursor: pointer;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative; /* So the badge is positioned inside it */
+      }
+
+      .badge {
+        position: absolute;
+        top: 26px;  /* Adjust position */
+        right: 5px; /* Fine-tune position */
+        background-color: #AA1934 !important;
+        color: white !important;
+        font-size: 10px;
+        font-weight: bold;
+        border-radius: 10%;
+        width: 22px;
+        height: 22px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        z-index: 10; /* Ensures it stays on top */
+      }
+
+
+
+      .iconPerson-container, .iconCart-container {
+        transition: transform 0.2s ease-in-out;
+
+        &:hover {
+          background-color: #00628F;
+        }
+
+        .icon-person, .icon-basket {
+          transition: color 0.2s ease-in-out;
+
+          &:hover {
+            color: #FFCC00;
+          }
+        }
+      }
+    }
+
+
+
+
+    .icon-basket::before {
+      content: "\e900";
+      font-family: 'icomoon' !important;
+      color: white !important;
+    }
+
+    .icon-person::before {
+      content: "\e901";
+      font-family: 'icomoon' !important;
+      color: white !important;
+    }
+  }
 }

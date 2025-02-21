@@ -5,7 +5,6 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatBadgeModule} from '@angular/material/badge';
 
 
-
 @Component({
   selector: 'app-navbar',
   standalone: true,
